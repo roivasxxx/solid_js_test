@@ -17,6 +17,7 @@ const App: Component = () => {
         >
           Learn Solid
         </a>
+        <div class="bg-white-800"> ddfdfdfs</div>
       </header>
     </div>
   );
