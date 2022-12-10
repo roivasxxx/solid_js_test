@@ -1,25 +1,17 @@
-import { Component } from "solid-js";
-
+import { Component, ErrorBoundary } from "solid-js";
+import { Route, Routes } from "solid-app-router";
 import styles from "./App.module.css";
+import ErrorComponent from "./components/ErrorComponent";
 
 const App: Component = () => {
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-        <div class="bg-white-800"> ddfdfdfs</div>
-      </header>
-    </div>
+    <ErrorBoundary fallback={(err) => <ErrorComponent err={err} />}>
+      <div>
+        <Routes>
+          <Route path="/" element={() => <div>algos list</div>} />
+        </Routes>
+      </div>
+    </ErrorBoundary>
   );
 };
 
