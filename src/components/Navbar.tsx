@@ -16,7 +16,7 @@ export default function Navbar({}) {
         Home
       </NavLink>
       <NavLink
-        href="algos"
+        href="/algos"
         class="bg-stone-600 text-fuchsia-600 rounded-md p-2 m-2"
         activeClass="text-fuchsia-100"
       >

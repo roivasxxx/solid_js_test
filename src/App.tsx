@@ -8,13 +8,14 @@ import Navbar from "./components/Navbar";
 
 const App: Component = () => {
   return (
-    <ErrorBoundary fallback={(err) => <ErrorComponent err={err} />}>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="algos" element={<Algos />} />
-      </Routes>
-    </ErrorBoundary>
+    <div>
+      <ErrorBoundary fallback={(err) => <ErrorComponent err={err} />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/algos" element={<Algos />} />
+        </Routes>
+      </ErrorBoundary>
+    </div>
   );
 };
 
