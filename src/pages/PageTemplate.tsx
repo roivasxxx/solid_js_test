@@ -3,12 +3,7 @@ import Navbar from "../components/Navbar";
 import { Page } from "../types";
 
 const PageTemplate: ParentComponent = ({ children }: Page) => {
-  return (
-    <div>
-      <Navbar />
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 };
 
 export default PageTemplate;
