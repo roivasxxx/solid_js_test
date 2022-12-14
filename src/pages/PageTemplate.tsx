@@ -9,9 +9,11 @@ const PageTemplate: ParentComponent = ({
   displayFooter,
 }: Page) => {
   return (
-    <div>
+    <div class="w-full h-full">
       {displayNav === undefined || displayNav === true ? <Navbar /> : <></>}
-      <div class="w-4/5 bg-contentbg">{children}</div>
+      <div class="w-4/5 bg-contentbg p-5 my-5 m-auto rounded min-h-[50%]">
+        {children}
+      </div>
       {displayFooter === undefined || displayFooter === true ? (
         <Footer />
       ) : (
