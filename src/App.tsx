@@ -12,7 +12,9 @@ const App: Component = () => {
       <ErrorBoundary fallback={(err) => <ErrorComponent err={err} />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/algos" element={<Algos />} />
+          <Route path="/algos">
+            <Route path="/" element={<Algos />} />
+          </Route>
         </Routes>
       </ErrorBoundary>
     </div>
