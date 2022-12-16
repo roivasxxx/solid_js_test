@@ -5,6 +5,7 @@ import ErrorComponent from "./components/ErrorComponent";
 import Home from "./pages/Home";
 import Algos from "./pages/Algos";
 import Navbar from "./components/Navbar";
+import Articulations from "./pages/Articulations";
 
 const App: Component = () => {
   return (
@@ -13,6 +14,7 @@ const App: Component = () => {
         <Route path="/" element={<Home />} />
         <Route path="/algos">
           <Route path="/" element={<Algos />} />
+          <Route path="/articulations" element={<Articulations />} />
         </Route>
       </Routes>
     </ErrorBoundary>
