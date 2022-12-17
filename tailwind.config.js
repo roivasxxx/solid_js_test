@@ -24,6 +24,7 @@ module.exports = {
         btnbg: "#21262d",
         headingtext: "#c7cfd7",
         contenttextlink: "#58a6ff",
+        active_blue: "#58a6ff",
       },
     },
   },
