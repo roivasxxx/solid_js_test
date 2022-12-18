@@ -1,10 +1,11 @@
+import Matrix from "../components/Matrix";
 import MatrixComponent from "../components/MatrixComponent";
 import PageTemplate from "./PageTemplate";
 
 const Articulations = () => {
   return (
     <PageTemplate>
-      <MatrixComponent />
+      <Matrix matrixType="adjacency" />
     </PageTemplate>
   );
 };
