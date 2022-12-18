@@ -46,22 +46,37 @@ const MatrixComponent = () => {
         when={state.matrix.length > 1 && state.matrix.length < alphabet.length}
         fallback={<div></div>}
       >
-        <Index each={state.matrix}>
-          {(arr, i) => (
-            <div class="flex flex-row">
-              <Index each={arr()}>
-                {(el, j) => (
-                  <button
-                    class="bg-secondarybg w-10"
-                    onClick={() => matrixHandler(i, j)}
-                  >
-                    {el()}
-                  </button>
-                )}
+        <table>
+          <thead>
+            <tr>
+              <th class="w-10 m-2"></th>
+              <Index each={Array.from(state.vertices)}>
+                {(vertex) => <th class="w-10 m-2">{vertex()}</th>}
               </Index>
-            </div>
-          )}
-        </Index>
+            </tr>
+          </thead>
+          <tbody>
+            <Index each={state.matrix}>
+              {(arr, i) => (
+                <tr>
+                  <th scope="row">{state.vertices[i]}</th>
+                  <Index each={arr()}>
+                    {(el, j) => (
+                      <td>
+                        <button
+                          class="bg-secondarybg w-10 p-2"
+                          onClick={() => matrixHandler(i, j)}
+                        >
+                          {el()}
+                        </button>
+                      </td>
+                    )}
+                  </Index>
+                </tr>
+              )}
+            </Index>
+          </tbody>
+        </table>
       </Show>
     </div>
   );
